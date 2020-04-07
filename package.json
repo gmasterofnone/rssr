@@ -1,0 +1,40 @@
+{
+  "name": "rssr",
+  "version": "1.0.0",
+  "description": "Light React SSR Boiler",
+  "main": "index.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/gmasterofnone/rssr.git"
+  },
+  "scripts": {
+    "clean": "rm -rf dist/clientBuild dist/appBuild",
+    "build:dev": "webpack --hot --w --config webpack.config.js --mode=development",
+    "start:dev": "nodemon ./dist/appBuild/app.js",
+    "start:all": "run-p build:dev start:dev --print-label",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "GM",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
