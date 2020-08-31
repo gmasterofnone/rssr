@@ -34,24 +34,20 @@ const clientConfig = {
 };
 
 const serverConfig = {
-  entry: './app/index.js',
+  entry: './server/index.js',
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: path.resolve(__dirname, 'dist/appBuild'),
-    filename: 'app.js',
-    publicPath: '/',
+    path: path.resolve(__dirname, 'dist/serverBuild'),
+    filename: 'server.js',
   },
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
-      {
-        test: /\.css$/,
-        use: ['css-loader'],
-      },
+      { test: /\.css$/, use: 'css-loader' },
       {
         test: /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
-        use: 'file-loader',
+        use: 'null-loader'
       }
     ]
   },
