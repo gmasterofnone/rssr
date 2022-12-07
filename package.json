@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.6.4",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "svg-url-loader": "^6.0.0"
